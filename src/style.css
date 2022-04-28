@@ -16,9 +16,10 @@ nav {
 }
 
 .nav-logo {
-    max-width: 100px;
+    max-width: 100%;
 }
 
+/*HERO SECTION*/
 section {
     padding: 20px;
 }
@@ -59,29 +60,70 @@ section {
     color: #222222;
 }
 
-.bold {
-    font-weight: bold;
-}
-
-.gray {
-    color: #918E9B;
+/*CARD Section*/
+.card-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .card {
+    position: relative;
     width: 175px;
     font-size: 12px;
+    flex: 0 0 auto;         /* ADD */
+    display: flex;          /* ADD */
+    flex-direction: column; /* ADD */
+    margin-left: 37px;
 }
 
 .card-image {
     width: 100%;
+    height: 235px;
     border-radius: 9px;
+    margin-bottom: 9px;
 }
 
-.card-stats {
-    display: flex;
-    align-items: center;
+/* ADD */
+.card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+.card-stats > p {
+    font-size: 12px;
+    line-height: 13.2px;
+  }
 
 .card-star {
-    height: 14px;
+    max-width: 14px;
+    width: 100%;
 }
+
+.gray {
+    margin-right: 2px;
+    color: #918e9b;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  
+  .rating {
+    color: #222222;
+    margin-left: 2px;
+  }
+
+/* ADD */
+.card-price {
+    margin-top: auto;
+}
+
+.card-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
+  }
